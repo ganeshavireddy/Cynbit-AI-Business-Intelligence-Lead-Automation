@@ -1,11 +1,15 @@
 # ⚡ Cynbit AI Business Intelligence & Lead Automation Agent
 
+[![Render Live](https://img.shields.io/badge/Render-Live%20Platform-46E3B7?logo=render&logoColor=white&style=for-the-badge)](https://cynbit-ai-business-intelligence-lead.onrender.com/)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.112.0-009688.svg)](https://fastapi.tiangolo.com/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.37%2B-FF4B4B.svg)](https://streamlit.io/)
 [![Plotly](https://img.shields.io/badge/Plotly-5.22%2B-3F4F75.svg)](https://plotly.com/)
 [![Pydantic v2](https://img.shields.io/badge/Pydantic-v2.8-E92063.svg)](https://docs.pydantic.dev/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+> 🌐 **Live Production Deployment:**  
+> Access the live interactive cloud application on Render at **[https://cynbit-ai-business-intelligence-lead.onrender.com/](https://cynbit-ai-business-intelligence-lead.onrender.com/)**
 
 An enterprise-grade, autonomous **Business Intelligence & Lead Automation Platform** built for **Cynbit Technologies**. 
 
@@ -271,19 +275,23 @@ This is the fastest, zero-maintenance method to get a public live URL:
 
 ### 🚀 Method 2: Render / Railway (Cloud PaaS with Full Stack)
 
-To deploy both FastAPI and Streamlit on a PaaS provider:
+> 🟢 **Production Instance Online:**  
+> The application is currently live on Render at:  
+> 👉 **[https://cynbit-ai-business-intelligence-lead.onrender.com/](https://cynbit-ai-business-intelligence-lead.onrender.com/)**
 
-1. **Create Web Service**:
+To deploy your own instance of both FastAPI and Streamlit on Render:
+
+1. **Create Web Service or Blueprint**:
    - Link your GitHub repo: `ganeshavireddy/Cynbit-AI-Business-Intelligence-Lead-Automation`.
-2. **Configure Service**:
-   - **Environment:** `Python 3.11`
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `python run_app.py` *(or let the platform detect `Procfile`)*
+   - Render automatically reads `render.yaml` and `.python-version` (3.11.9).
+2. **Build & Start Commands**:
+   - **Build Command:** `pip install --upgrade pip && pip install -r requirements.txt`
+   - **Start Command:** `python run_app.py`
 3. **Environment Variables**:
-   - `PORT`: `8501` (or your service port)
    - `PORT_BACKEND`: `8000`
+   - `PYTHON_VERSION`: `3.11.9`
    - `GEMINI_API_KEY`: *(optional)*
-4. Click **Create Web Service**.
+4. Click **Apply / Create Web Service**.
 
 ---
 
