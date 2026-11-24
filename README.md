@@ -238,6 +238,72 @@ The Streamlit dashboard features an integrated core engine fallback. Even if the
 streamlit run frontend/app.py
 ```
 
+### Option C: Unified Single-Command Production Runner
+Launch both FastAPI (port 8000) and Streamlit (port 8501) concurrently in one command with graceful signal handling:
+```bash
+python run_app.py
+```
+
+---
+
+## ☁️ Cloud & Production Deployment Guide
+
+The repository includes production configuration files (`Dockerfile`, `docker-compose.yml`, `Procfile`, `run_app.py`, `.streamlit/config.toml`) ready for instant cloud deployment.
+
+### 🌟 Method 1: Streamlit Community Cloud (Recommended — 100% Free, 1-Click Live URL)
+
+This is the fastest, zero-maintenance method to get a public live URL:
+
+1. Click this pre-configured one-click deployment link:  
+   👉 **[Deploy to Streamlit Community Cloud](https://share.streamlit.io/deploy?repository=ganeshavireddy/Cynbit-AI-Business-Intelligence-Lead-Automation&branch=main&mainModule=frontend/app.py)**
+2. Sign in with GitHub.
+3. Confirm settings:
+   - **Repository:** `ganeshavireddy/Cynbit-AI-Business-Intelligence-Lead-Automation`
+   - **Branch:** `main`
+   - **Main file path:** `frontend/app.py`
+4. *(Optional)* Click **Advanced Settings** and add your secret:
+   ```toml
+   GEMINI_API_KEY = "your-api-key-here"
+   ```
+5. Click **Deploy!** In ~2 minutes, your dashboard will be live at `https://cynbit-ai-lead-automation.streamlit.app`.
+
+---
+
+### 🚀 Method 2: Render / Railway (Cloud PaaS with Full Stack)
+
+To deploy both FastAPI and Streamlit on a PaaS provider:
+
+1. **Create Web Service**:
+   - Link your GitHub repo: `ganeshavireddy/Cynbit-AI-Business-Intelligence-Lead-Automation`.
+2. **Configure Service**:
+   - **Environment:** `Python 3.11`
+   - **Build Command:** `pip install -r requirements.txt`
+   - **Start Command:** `python run_app.py` *(or let the platform detect `Procfile`)*
+3. **Environment Variables**:
+   - `PORT`: `8501` (or your service port)
+   - `PORT_BACKEND`: `8000`
+   - `GEMINI_API_KEY`: *(optional)*
+4. Click **Create Web Service**.
+
+---
+
+### 🐳 Method 3: Docker & Docker Compose (VPS, DigitalOcean, AWS EC2, GCP)
+
+Deploy the containerized stack on any cloud VPS or server:
+
+```bash
+# 1. Clone repository
+git clone https://github.com/ganeshavireddy/Cynbit-AI-Business-Intelligence-Lead-Automation.git
+cd Cynbit-AI-Business-Intelligence-Lead-Automation
+
+# 2. Build and run containers in background
+docker compose up --build -d
+```
+
+- **Streamlit UI:** `http://<your-server-ip>:8501`
+- **FastAPI OpenAPI Docs:** `http://<your-server-ip>:8000/docs`
+- Health check status: `docker ps` and `curl http://localhost:8501/_stcore/health`
+
 ---
 
 ## 📡 REST API Reference
