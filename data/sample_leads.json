@@ -1,0 +1,399 @@
+[
+  {
+    "lead_id": "LEAD-1001",
+    "company_name": "Apex Logistics AI",
+    "contact_name": "Marcus Vance",
+    "contact_role": "VP of Revenue Operations",
+    "contact_email": "m.vance@apexlogistics.io",
+    "industry": "Supply Chain & Logistics",
+    "company_size": "201-500",
+    "annual_revenue_usd": 38000000,
+    "country": "United States",
+    "website": "https://apexlogistics.io",
+    "lead_source": "Demo Request Form",
+    "current_crm_or_stack": "Salesforce",
+    "pain_points": [
+      "Inbound lead triage takes 24-48 hours, causing high drop-off",
+      "SDR team spending 40% of time on manual data entry and enrichment",
+      "No real-time intent prioritization for enterprise prospects"
+    ],
+    "budget_status": "Approved ($50k-$100k)",
+    "purchase_timeline": "Immediate (<1 month)",
+    "engagement_signals": {
+      "website_visits_30d": 24,
+      "pricing_page_visits": 7,
+      "whitepaper_downloads": [
+        "2026 Supply Chain AI Automation Benchmark",
+        "Autonomous Lead Routing Blueprint"
+      ],
+      "webinar_attended": true,
+      "email_open_rate": 0.88,
+      "email_click_rate": 0.54,
+      "time_on_site_avg_sec": 310
+    },
+    "notes": "Marcus attended our executive webinar and requested a private architecture walkthrough for their 35-person sales org.",
+    "created_at": "2026-11-18T09:15:00Z"
+  },
+  {
+    "lead_id": "LEAD-1002",
+    "company_name": "HealthPulse Dynamics",
+    "contact_name": "Dr. Elena Rostova",
+    "contact_role": "Chief Technology Officer",
+    "contact_email": "erostova@healthpulse.com",
+    "industry": "Healthcare & MedTech",
+    "company_size": "501-1000",
+    "annual_revenue_usd": 85000000,
+    "country": "United States",
+    "website": "https://healthpulse.com",
+    "lead_source": "Website Inbound",
+    "current_crm_or_stack": "HubSpot",
+    "pain_points": [
+      "Strict HIPAA compliance requirements for clinical lead intake",
+      "High volume of unvetted clinical partner inquiries",
+      "Need autonomous qualification with verified audit trails"
+    ],
+    "budget_status": "Approved ($100k+)",
+    "purchase_timeline": "1-3 months",
+    "engagement_signals": {
+      "website_visits_30d": 19,
+      "pricing_page_visits": 4,
+      "whitepaper_downloads": [
+        "Healthcare Compliance in Autonomous AI Systems"
+      ],
+      "webinar_attended": true,
+      "email_open_rate": 0.76,
+      "email_click_rate": 0.38,
+      "time_on_site_avg_sec": 245
+    },
+    "notes": "Evaluating enterprise-grade AI agents for clinical provider onboarding and vetting.",
+    "created_at": "2026-11-19T14:30:00Z"
+  },
+  {
+    "lead_id": "LEAD-1003",
+    "company_name": "FinEdge Global",
+    "contact_name": "Julian Sterling",
+    "contact_role": "Director of Growth",
+    "contact_email": "jsterling@finedge.co.uk",
+    "industry": "FinTech & Payments",
+    "company_size": "51-200",
+    "annual_revenue_usd": 16500000,
+    "country": "United Kingdom",
+    "website": "https://finedge.co.uk",
+    "lead_source": "LinkedIn Outreach",
+    "current_crm_or_stack": "HubSpot",
+    "pain_points": [
+      "Low cold outreach conversion rates (under 1.2%)",
+      "Inability to generate deeply contextual B2B outreach at scale",
+      "Slow pipeline velocity in EMEA merchant acquisition"
+    ],
+    "budget_status": "Exploring ($20k-$50k)",
+    "purchase_timeline": "1-3 months",
+    "engagement_signals": {
+      "website_visits_30d": 11,
+      "pricing_page_visits": 3,
+      "whitepaper_downloads": [
+        "Hyper-Personalized B2B Cold Outreach Playbook"
+      ],
+      "webinar_attended": false,
+      "email_open_rate": 0.65,
+      "email_click_rate": 0.28,
+      "time_on_site_avg_sec": 190
+    },
+    "notes": "Interested in replacing generic sequencers (Outreach/Apollo) with autonomous AI agent personalization.",
+    "created_at": "2026-11-20T11:05:00Z"
+  },
+  {
+    "lead_id": "LEAD-1004",
+    "company_name": "CloudScale Networks",
+    "contact_name": "Devin Chen",
+    "contact_role": "Founder & CEO",
+    "contact_email": "devin@cloudscale.net",
+    "industry": "Cloud Infrastructure SaaS",
+    "company_size": "11-50",
+    "annual_revenue_usd": 4200000,
+    "country": "Singapore",
+    "website": "https://cloudscale.net",
+    "lead_source": "Referral",
+    "current_crm_or_stack": "Pipedrive",
+    "pain_points": [
+      "No full-time SDR hired yet; founder manually handling all leads",
+      "Need end-to-end autonomous triage from demo booking to follow-up",
+      "Needs seamless API integration with custom billing webhook"
+    ],
+    "budget_status": "Exploring ($20k-$50k)",
+    "purchase_timeline": "Immediate (<1 month)",
+    "engagement_signals": {
+      "website_visits_30d": 32,
+      "pricing_page_visits": 9,
+      "whitepaper_downloads": [
+        "From Seed to Series A: Autonomous Sales Engine"
+      ],
+      "webinar_attended": true,
+      "email_open_rate": 0.95,
+      "email_click_rate": 0.70,
+      "time_on_site_avg_sec": 420
+    },
+    "notes": "Referred by existing Cynbit partner. Extremely high intent, wants quick proof-of-concept deployment.",
+    "created_at": "2026-11-21T08:20:00Z"
+  },
+  {
+    "lead_id": "LEAD-1005",
+    "company_name": "OmniRetail Group",
+    "contact_name": "Patricia Morales",
+    "contact_role": "Head of Digital Marketing",
+    "contact_email": "pmorales@omniretail.de",
+    "industry": "E-Commerce & Retail",
+    "company_size": "1000+",
+    "annual_revenue_usd": 240000000,
+    "country": "Germany",
+    "website": "https://omniretail.de",
+    "lead_source": "Website Inbound",
+    "current_crm_or_stack": "Salesforce",
+    "pain_points": [
+      "B2B wholesale branch is lagging behind digital consumer operations",
+      "High volume of small vendor applications clogging the sales funnel",
+      "Manual credit and qualification check bottlenecks"
+    ],
+    "budget_status": "Under Review",
+    "purchase_timeline": "3-6 months",
+    "engagement_signals": {
+      "website_visits_30d": 8,
+      "pricing_page_visits": 1,
+      "whitepaper_downloads": [
+        "Enterprise Lead Orchestration at Scale"
+      ],
+      "webinar_attended": false,
+      "email_open_rate": 0.42,
+      "email_click_rate": 0.12,
+      "time_on_site_avg_sec": 135
+    },
+    "notes": "Large enterprise account. Long procurement cycle but massive potential account expansion value.",
+    "created_at": "2026-11-15T16:45:00Z"
+  },
+  {
+    "lead_id": "LEAD-1006",
+    "company_name": "CyberShield Defense",
+    "contact_name": "Harrison Cole",
+    "contact_role": "Chief Commercial Officer",
+    "contact_email": "h.cole@cybershield.com",
+    "industry": "Cybersecurity",
+    "company_size": "201-500",
+    "annual_revenue_usd": 52000000,
+    "country": "United States",
+    "website": "https://cybershield.com",
+    "lead_source": "Webinar Signup",
+    "current_crm_or_stack": "Salesforce",
+    "pain_points": [
+      "Enterprise security buyers require rapid, deeply technical qualification",
+      "Inbound SDRs lack technical acumen to assess infrastructure needs",
+      "Losing deals to faster-responding competitors"
+    ],
+    "budget_status": "Approved ($50k-$100k)",
+    "purchase_timeline": "1-3 months",
+    "engagement_signals": {
+      "website_visits_30d": 21,
+      "pricing_page_visits": 6,
+      "whitepaper_downloads": [
+        "Technical Lead Scoring Architecture",
+        "Autonomous AI Agent Security Framework"
+      ],
+      "webinar_attended": true,
+      "email_open_rate": 0.81,
+      "email_click_rate": 0.49,
+      "time_on_site_avg_sec": 295
+    },
+    "notes": "Harrison asked whether the AI agent can dynamically pull public CVE data and company tech stack during qualification.",
+    "created_at": "2026-11-22T10:00:00Z"
+  },
+  {
+    "lead_id": "LEAD-1007",
+    "company_name": "GreenGrid Utilities",
+    "contact_name": "Aarav Sharma",
+    "contact_role": "General Manager - Commercial",
+    "contact_email": "aarav.sharma@greengrid.in",
+    "industry": "Renewable Energy & Utilities",
+    "company_size": "501-1000",
+    "annual_revenue_usd": 72000000,
+    "country": "India",
+    "website": "https://greengrid.in",
+    "lead_source": "Conference Event",
+    "current_crm_or_stack": "Zoho",
+    "pain_points": [
+      "Inbound commercial solar proposals take weeks to analyze and score",
+      "Disparate data between spreadsheets and legacy CRM",
+      "Need automated financial feasibility estimation for B2B contracts"
+    ],
+    "budget_status": "Approved ($50k-$100k)",
+    "purchase_timeline": "1-3 months",
+    "engagement_signals": {
+      "website_visits_30d": 14,
+      "pricing_page_visits": 3,
+      "whitepaper_downloads": [
+        "AI-Driven Contract Intelligence & Lead Scoring"
+      ],
+      "webinar_attended": false,
+      "email_open_rate": 0.70,
+      "email_click_rate": 0.35,
+      "time_on_site_avg_sec": 210
+    },
+    "notes": "Met at APAC CleanTech Summit. High interest in Cynbit's cognitive automation capabilities.",
+    "created_at": "2026-11-17T13:10:00Z"
+  },
+  {
+    "lead_id": "LEAD-1008",
+    "company_name": "Precision Automation Works",
+    "contact_name": "Klaus Schneider",
+    "contact_role": "VP of Operations",
+    "contact_email": "klaus@precisionworks.ch",
+    "industry": "Industrial Manufacturing",
+    "company_size": "201-500",
+    "annual_revenue_usd": 48000000,
+    "country": "Switzerland",
+    "website": "https://precisionworks.ch",
+    "lead_source": "Website Inbound",
+    "current_crm_or_stack": "Salesforce",
+    "pain_points": [
+      "Complex custom engineering RFPs take days to route to the correct specialist",
+      "High friction in buyer journey for specialized CNC and robotics parts"
+    ],
+    "budget_status": "Exploring ($20k-$50k)",
+    "purchase_timeline": "3-6 months",
+    "engagement_signals": {
+      "website_visits_30d": 9,
+      "pricing_page_visits": 2,
+      "whitepaper_downloads": [],
+      "webinar_attended": false,
+      "email_open_rate": 0.50,
+      "email_click_rate": 0.18,
+      "time_on_site_avg_sec": 160
+    },
+    "notes": "Exploring automated technical triage to pre-evaluate OEM specifications before engineer review.",
+    "created_at": "2026-11-12T15:00:00Z"
+  },
+  {
+    "lead_id": "LEAD-1009",
+    "company_name": "TalentVibe HR",
+    "contact_name": "Chloe Dupont",
+    "contact_role": "Talent Acquisition Specialist",
+    "contact_email": "chloe.d@talentvibe.fr",
+    "industry": "HR Tech & Recruiting",
+    "company_size": "11-50",
+    "annual_revenue_usd": 1800000,
+    "country": "France",
+    "website": "https://talentvibe.fr",
+    "lead_source": "Organic Search",
+    "current_crm_or_stack": "Spreadsheets/Manual",
+    "pain_points": [
+      "Looking for general recruiting software; misunderstanding Cynbit's sales BI focus"
+    ],
+    "budget_status": "No Budget",
+    "purchase_timeline": "6+ months",
+    "engagement_signals": {
+      "website_visits_30d": 2,
+      "pricing_page_visits": 0,
+      "whitepaper_downloads": [],
+      "webinar_attended": false,
+      "email_open_rate": 0.15,
+      "email_click_rate": 0.0,
+      "time_on_site_avg_sec": 45
+    },
+    "notes": "Low ICP match. Contact is a junior recruiter looking for HR ATS rather than sales BI and lead automation.",
+    "created_at": "2026-11-23T07:45:00Z"
+  },
+  {
+    "lead_id": "LEAD-1010",
+    "company_name": "Student Project Hub",
+    "contact_name": "Alex Smith",
+    "contact_role": "Student Intern",
+    "contact_email": "alex.smith99@gmail.com",
+    "industry": "Education / Personal",
+    "company_size": "1-10",
+    "annual_revenue_usd": 15000,
+    "country": "United States",
+    "website": "https://personalblog.io",
+    "lead_source": "Organic Search",
+    "current_crm_or_stack": "Spreadsheets/Manual",
+    "pain_points": [
+      "Looking for free AI tool for university thesis project"
+    ],
+    "budget_status": "No Budget",
+    "purchase_timeline": "6+ months",
+    "engagement_signals": {
+      "website_visits_30d": 1,
+      "pricing_page_visits": 0,
+      "whitepaper_downloads": [],
+      "webinar_attended": false,
+      "email_open_rate": 0.05,
+      "email_click_rate": 0.0,
+      "time_on_site_avg_sec": 30
+    },
+    "notes": "Non-commercial lead using generic Gmail address. Instant disqualification target.",
+    "created_at": "2026-11-23T16:10:00Z"
+  },
+  {
+    "lead_id": "LEAD-1011",
+    "company_name": "Starlight Hospitality Tech",
+    "contact_name": "Gianna Rossi",
+    "contact_role": "Chief Revenue Officer",
+    "contact_email": "grossi@starlighthospitality.it",
+    "industry": "Travel & Hospitality SaaS",
+    "company_size": "51-200",
+    "annual_revenue_usd": 14200000,
+    "country": "Italy",
+    "website": "https://starlighthospitality.it",
+    "lead_source": "Demo Request Form",
+    "current_crm_or_stack": "HubSpot",
+    "pain_points": [
+      "Losing luxury hotel group leads due to delayed response times in non-European time zones",
+      "Need 24/7 autonomous engagement agent to book qualified executive demos"
+    ],
+    "budget_status": "Approved ($50k-$100k)",
+    "purchase_timeline": "Immediate (<1 month)",
+    "engagement_signals": {
+      "website_visits_30d": 27,
+      "pricing_page_visits": 8,
+      "whitepaper_downloads": [
+        "Global Inbound Lead Capture: 24/7 Autonomous Agents"
+      ],
+      "webinar_attended": true,
+      "email_open_rate": 0.91,
+      "email_click_rate": 0.62,
+      "time_on_site_avg_sec": 380
+    },
+    "notes": "Strong executive sponsor. Wants to launch pilot across Americas and APAC inbound funnels next month.",
+    "created_at": "2026-11-20T17:30:00Z"
+  },
+  {
+    "lead_id": "LEAD-1012",
+    "company_name": "VentureScale Capital",
+    "contact_name": "Liam Thorne",
+    "contact_role": "Operating Partner - Portfolio Growth",
+    "contact_email": "lthorne@venturescale.vc",
+    "industry": "Venture Capital & Private Equity",
+    "company_size": "11-50",
+    "annual_revenue_usd": 25000000,
+    "country": "United States",
+    "website": "https://venturescale.vc",
+    "lead_source": "Referral",
+    "current_crm_or_stack": "Affinity CRM",
+    "pain_points": [
+      "Need automated market intelligence and founder outreach for 40+ portfolio companies",
+      "Looking for strategic platform partnership with an AI automation leader"
+    ],
+    "budget_status": "Approved ($100k+)",
+    "purchase_timeline": "1-3 months",
+    "engagement_signals": {
+      "website_visits_30d": 16,
+      "pricing_page_visits": 5,
+      "whitepaper_downloads": [
+        "AI Agents for Portfolio Value Creation"
+      ],
+      "webinar_attended": false,
+      "email_open_rate": 0.78,
+      "email_click_rate": 0.45,
+      "time_on_site_avg_sec": 260
+    },
+    "notes": "High-multiplier enterprise partner. Could deploy Cynbit agent stack across multiple portfolio SaaS companies.",
+    "created_at": "2026-11-19T18:00:00Z"
+  }
+]

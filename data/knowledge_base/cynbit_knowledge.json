@@ -1,0 +1,258 @@
+[
+  {
+    "doc_id": "CS-001",
+    "title": "Apex Logistics AI - Enterprise Supply Chain Lead Automation Case Study",
+    "category": "Case Studies",
+    "industry": "Supply Chain & Logistics",
+    "keywords": [
+      "logistics",
+      "supply chain",
+      "triage latency",
+      "salesforce",
+      "demo conversion",
+      "roi"
+    ],
+    "content": "Apex Logistics AI, an enterprise freight brokerage and supply chain platform with 350 employees, suffered from a 24 to 48-hour inbound lead triage delay across their 35-person sales org. Inbound prospects were frequently lost to competitors who reached them first. After deploying Cynbit's Autonomous Cognitive Inbound Agent with bi-directional Salesforce sync, Apex reduced their speed-to-lead response time from 26 hours down to 78 seconds. Lead-to-demo conversion rate increased by 380%, SDR manual data entry was reduced by 85%, and the initial software deployment achieved a full financial ROI payback in 32 days.",
+    "metrics": {
+      "response_time_reduction": "26 hours to 78 seconds (99.2% reduction)",
+      "pipeline_velocity_lift": "+380% lead-to-demo conversion",
+      "sdr_time_saved": "14 hours/week per rep",
+      "payback_period": "32 days"
+    }
+  },
+  {
+    "doc_id": "CS-002",
+    "title": "HealthPulse Dynamics - HIPAA-Compliant Clinical Partner Qualification",
+    "category": "Case Studies",
+    "industry": "Healthcare & MedTech",
+    "keywords": [
+      "healthcare",
+      "medtech",
+      "hipaa",
+      "compliance",
+      "provider vetting",
+      "hubspot"
+    ],
+    "content": "HealthPulse Dynamics ($85M annual revenue, 650 employees) required strict HIPAA compliance and rigorous credential verification for medical provider onboarding inquiries. Their clinical operations team spent 40% of their bandwidth vetting uncertified inquiries. Cynbit deployed a specialized compliance-validated AI agent integrated with HubSpot and verification APIs. The agent autonomously verified provider NPI numbers, clinical credentials, and intent signals, generating a verified audit log for every inquiry. Provider onboarding throughput increased 4.2x while maintaining zero compliance violations.",
+    "metrics": {
+      "throughput_increase": "4.2x faster provider onboarding",
+      "compliance_rate": "100% HIPAA and audit trail compliance",
+      "manual_vetting_eliminated": "75% reduction in unvetted inquiry backlog"
+    }
+  },
+  {
+    "doc_id": "CS-003",
+    "title": "FinEdge Global - B2B FinTech EMEA Merchant Acquisition Acceleration",
+    "category": "Case Studies",
+    "industry": "FinTech & Payments",
+    "keywords": [
+      "fintech",
+      "payments",
+      "cold outreach",
+      "email conversion",
+      "emea",
+      "merchant acquisition"
+    ],
+    "content": "FinEdge Global, a payment infrastructure provider in the UK ($16.5M revenue), experienced sub-1.2% cold outreach reply rates when using generic sequencers like Apollo and Outreach. Cynbit implemented its Hyper-Personalized Multi-Channel Outreach Drafter powered by RAG and dynamic pain-point synthesis. By automatically injecting relevant transaction volume benchmarks and regulatory pain points into bespoke outbound emails and LinkedIn InMails, FinEdge achieved a sustained 34.2% response rate and unlocked $1.8M in net new Annual Recurring Revenue (ARR) within 90 days.",
+    "metrics": {
+      "reply_rate_improvement": "1.2% to 34.2% response rate (28.5x increase)",
+      "net_new_arr": "$1,850,000 within 90 days",
+      "inmail_acceptance_rate": "61% on executive outreach"
+    }
+  },
+  {
+    "doc_id": "CS-004",
+    "title": "OmniRetail Group - Automated B2B Wholesale Vendor Qualification",
+    "category": "Case Studies",
+    "industry": "E-Commerce & Retail",
+    "keywords": [
+      "retail",
+      "ecommerce",
+      "wholesale",
+      "vendor qualification",
+      "credit check",
+      "pipeline"
+    ],
+    "content": "OmniRetail Group, an international retail and wholesale conglomerate with over 1,200 employees, struggled with thousands of small, unvetted wholesale supplier inquiries clogging their sales funnel. Human sales reps took an average of 5 business days to review credit and inventory requirements. Cynbit integrated an autonomous lead scoring and qualification agent that pre-evaluated supplier catalog size, credit ratings, and inventory capabilities against strict ICP criteria. High-value enterprise suppliers were routed to senior account directors in <2 minutes, while low-fit applicants received automated polite self-serve guidance.",
+    "metrics": {
+      "triage_cycle_time": "5 days reduced to 110 seconds",
+      "account_expansion": "48% increase in qualified enterprise supplier pipeline",
+      "bandwidth_reclaimed": "+120 hours monthly for procurement leadership"
+    }
+  },
+  {
+    "doc_id": "CS-005",
+    "title": "CyberShield Defense - High-Acuity Technical Infrastructure Triage",
+    "category": "Case Studies",
+    "industry": "Cybersecurity",
+    "keywords": [
+      "cybersecurity",
+      "technical qualification",
+      "cve",
+      "infrastructure",
+      "salesforce"
+    ],
+    "content": "CyberShield Defense ($52M revenue) sells complex enterprise zero-trust security solutions. Inbound SDRs lacked the technical expertise to qualify prospects based on multi-cloud infrastructure and compliance frameworks. Cynbit's AI Agent was enriched with cybersecurity domain knowledge and technical diagnostic prompts. The agent engaged technical buyers (CISOs and Security Directors) with deep context regarding their cloud architecture and compliance mandates (SOC2, FedRAMP, ISO27001), achieving an 82% reduction in qualification friction and a 44% acceleration in sales cycle velocity.",
+    "metrics": {
+      "sales_cycle_acceleration": "44% faster from demo to contract proposal",
+      "technical_qualification_accuracy": "96.4% verified by Sales Engineering leadership",
+      "ae_pipeline_acceptance": "94% of agent-routed leads accepted into active pipeline"
+    }
+  },
+  {
+    "doc_id": "PRD-001",
+    "title": "Cynbit Cognitive Inbound Agent - Technical Capabilities & Specs",
+    "category": "Product & Architecture Specs",
+    "industry": "Cross-Industry",
+    "keywords": [
+      "cognitive agent",
+      "inbound",
+      "real-time triage",
+      "crm sync",
+      "sub-90s sla",
+      "webhook"
+    ],
+    "content": "The Cynbit Cognitive Inbound Agent is an event-driven autonomous sales assistant that connects to website forms, webhook endpoints, and CRM queues. Upon receiving an inbound inquiry, it parses prospect firmographics, contact authority, and intent telemetry. It executes multi-step chain-of-thought reasoning to formulate a qualification decision (route to AE, schedule demo, trigger cognitive nurture, or archive). Integrates bi-directionally with Salesforce, HubSpot, Pipedrive, and Zoho via encrypted REST APIs with a guaranteed sub-90 second response SLA.",
+    "metrics": {
+      "processing_latency": "< 2.1 seconds end-to-end",
+      "supported_crms": "Salesforce, HubSpot, Pipedrive, Zoho, Custom Webhooks",
+      "uptime_sla": "99.95% enterprise availability"
+    }
+  },
+  {
+    "doc_id": "PRD-002",
+    "title": "Cynbit 4-Pillar Algorithmic Scoring Engine Formulation",
+    "category": "Product & Architecture Specs",
+    "industry": "Cross-Industry",
+    "keywords": [
+      "scoring",
+      "algorithm",
+      "firmographics",
+      "authority",
+      "behavioral intent",
+      "budget",
+      "icp"
+    ],
+    "content": "The Cynbit Scoring Engine evaluates every lead across four mathematically weighted pillars: Firmographic Fit (30%: industry affinity, headcount, revenue scale), Decision-Maker Authority (25%: C-Level, VP, Director vs IC; corporate email validation), Behavioral Intent (25%: pricing visits, 30d site visits, webinars, content downloads), and Budget Urgency (20%: budget threshold and purchase timeline). Normalizes scores to a 0-100 scale and categorizes into Tier 1 (Hot: 80-100), Tier 2 (Warm: 60-79), Tier 3 (Cold: 40-59), and Disqualified (<40). Includes anti-spam guardrails suppressing non-commercial and student submissions.",
+    "metrics": {
+      "scoring_calculation_time": "< 5 milliseconds",
+      "scoring_accuracy": "94%+ correlation with closed-won opportunities",
+      "weights": "30% Firmographic, 25% Authority, 25% Behavioral Intent, 20% Budget"
+    }
+  },
+  {
+    "doc_id": "PRD-003",
+    "title": "Enterprise Security, Compliance & Data Privacy Architecture",
+    "category": "Product & Architecture Specs",
+    "industry": "Cross-Industry",
+    "keywords": [
+      "security",
+      "soc2",
+      "hipaa",
+      "gdpr",
+      "zero data retention",
+      "encryption",
+      "pii"
+    ],
+    "content": "Cynbit is built from the ground up for strict enterprise data security and compliance. Features include: Zero Data Retention (ZDR) configuration preventing model providers from storing or training on customer data; TLS 1.3 encryption in transit and AES-256 encryption at rest; automatic PII sanitization (redacting SSNs, credit cards, and sensitive identifiers before model ingestion); full audit trails with ISO 8601 timestamps and deterministic reasoning logs for every automated decision; and complete alignment with SOC-2 Type II, HIPAA, and GDPR standards.",
+    "metrics": {
+      "encryption": "TLS 1.3 in-transit, AES-256 at-rest",
+      "data_retention_policy": "Zero Data Retention for LLM calls",
+      "compliance_frameworks": "SOC-2 Type II, HIPAA-ready, GDPR, CCPA"
+    }
+  },
+  {
+    "doc_id": "BC-001",
+    "title": "Competitive Battlecard: Cynbit vs. Legacy Sequencers (Apollo, Outreach, Salesloft)",
+    "category": "Sales Battlecards & Objections",
+    "industry": "Cross-Industry",
+    "keywords": [
+      "apollo",
+      "outreach",
+      "salesloft",
+      "competitors",
+      "battlecard",
+      "templating",
+      "sequencers"
+    ],
+    "content": "Why Cynbit wins against legacy sales engagement platforms like Apollo, Outreach, and Salesloft: Legacy tools are dumb sequencers relying on static email templates with rudimentary merge tags (e.g., 'Hi {{first_name}} at {{company}}'). Buyers immediately recognize and discard template blasts, causing response rates to drop below 1.2%. Cynbit is an autonomous cognitive agent that actually reads, understands, and synthesizes the prospect's actual pain points, current CRM software, and industry dynamics using RAG. Furthermore, legacy sequencers do not provide sub-90s inbound qualification or multi-pillar algorithmic scoring; they only blast outbound emails.",
+    "metrics": {
+      "reply_rate_comparison": "Cynbit (34.2%) vs Legacy Sequencers (1.2%)",
+      "triage_comparison": "Cynbit (78s automated) vs Legacy (18h manual)"
+    }
+  },
+  {
+    "doc_id": "BC-002",
+    "title": "Pricing Tiers, Implementation Timeline & Commercial Packaging",
+    "category": "Sales Battlecards & Objections",
+    "industry": "Cross-Industry",
+    "keywords": [
+      "pricing",
+      "cost",
+      "tiers",
+      "implementation",
+      "timeline",
+      "pilot"
+    ],
+    "content": "Cynbit offers three transparent commercial packages: 1. Starter Tier ($2,000/month): Up to 500 leads/mo, 4-Pillar Algorithmic Scoring, automated email drafting, and standard CRM connector. 2. Growth Tier ($5,000/month): Up to 2,500 leads/mo, Autonomous Inbound Cognitive Agent, RAG-enriched multi-channel outreach (Email, LinkedIn, SDR scripts), bi-directional Salesforce/HubSpot sync, and BI Dashboard. 3. Enterprise Suite ($8,000+/month): Unlimited leads, custom LLM fine-tuning, SOC2/HIPAA compliance, dedicated Solutions Architect, and 24/7 priority SLA. Deployment timeline: 2-week pilot implementation, 30 days to full enterprise production.",
+    "metrics": {
+      "starter_tier": "$24,000 / year ($2,000/mo)",
+      "growth_tier": "$60,000 / year ($5,000/mo)",
+      "enterprise_tier": "$96,000+ / year ($8,000/mo)",
+      "deployment_timeframe": "14-day rapid pilot; 30-day production rollout"
+    }
+  },
+  {
+    "doc_id": "BC-003",
+    "title": "Objection Playbook: 'We already have Salesforce / HubSpot, why do we need Cynbit?'",
+    "category": "Sales Battlecards & Objections",
+    "industry": "Cross-Industry",
+    "keywords": [
+      "salesforce",
+      "hubspot",
+      "objection",
+      "crm integration",
+      "enrichment"
+    ],
+    "content": "Salesforce and HubSpot are systems of record, not systems of intelligence. They store leads and contacts in passive databases, but they cannot autonomously perceive buying intent, calculate multi-factor predictive scores in <5ms, formulate cognitive qualification plans, or generate bespoke, pain-point-specific outreach copy. Cynbit acts as an intelligent cognitive brain sitting directly on top of Salesforce or HubSpot: it listens to incoming webhooks, enriches and qualifies the lead instantly, executes the optimal action, and updates CRM fields in real time without human intervention.",
+    "metrics": {
+      "crm_coexistence": "100% complementary; bi-directional native sync",
+      "rep_adoption": "Zero friction because reps continue working in Salesforce/HubSpot"
+    }
+  },
+  {
+    "doc_id": "BC-004",
+    "title": "Objection Playbook: 'Why not build an in-house wrapper with OpenAI API?'",
+    "category": "Sales Battlecards & Objections",
+    "industry": "Cross-Industry",
+    "keywords": [
+      "build vs buy",
+      "in-house",
+      "openai wrapper",
+      "maintenance",
+      "cost"
+    ],
+    "content": "Building an in-house AI lead system requires dedicated data engineering for CRM webhook reliability, vector database maintenance for RAG, PII masking pipelines, prompt engineering to prevent hallucinations, and ongoing LLM model evaluation. A typical in-house build requires 2 full-time ML/backend engineers ($360k+/year) and takes 6-9 months to reach production stability. Cynbit delivers a turnkey, enterprise-hardened solution with deterministic mathematical scoring guardrails, RAG knowledge indexing, and sub-90s SLAs on Day 1 at a fraction of the cost.",
+    "metrics": {
+      "in_house_cost": "$360k+ engineering payroll vs $60k Cynbit annual license",
+      "time_to_value": "Immediate (14 days) vs 6-9 months internal engineering build"
+    }
+  },
+  {
+    "doc_id": "DOC-013",
+    "title": "Tesla Energy - Commercial Solar Lead Qualification",
+    "category": "Case Studies",
+    "industry": "CleanTech & Energy",
+    "keywords": [
+      "solar",
+      "energy",
+      "commercial",
+      "qualification"
+    ],
+    "content": "Tesla Energy deployed Cynbit to qualify 5,000 monthly inquiries. Cut response latency to 45s and doubled contract value.",
+    "metrics": {
+      "response_time": "45 seconds",
+      "conversion_increase": "104%"
+    }
+  }
+]
