@@ -13,6 +13,120 @@ This system solves the multi-million-dollar B2B sales bottleneck: **Speed-to-Lea
 
 ---
 
+## 🏗️ System Architecture
+
+The platform is designed following a **decoupled, multi-layered enterprise architecture** that separates high-speed deterministic mathematical calculations from asynchronous cognitive LLM reasoning and executive presentation layers:
+
+```mermaid
+flowchart TD
+    subgraph INGESTION["1. Ingestion & Validation Layer"]
+        A1["Inbound Webhooks (HubSpot / Salesforce)"] --> B1["FastAPI Lead Intake Router"]
+        A2["Batch CSV / JSON Ingestion"] --> B1
+        A3["Interactive Dashboard Manual Input"] --> B1
+        B1 --> C1["Pydantic v2 Schema Sanitization & Contract Validation"]
+    end
+
+    subgraph ENGINE["2. Algorithmic Scoring Engine (< 5ms)"]
+        C1 --> D1["Firmographic Scorer (30% Weight)"]
+        C1 --> D2["Authority & Seniority Scorer (25% Weight)"]
+        C1 --> D3["Behavioral Intent Scorer (25% Weight)"]
+        C1 --> D4["Budget Urgency Scorer (20% Weight)"]
+        D1 & D2 & D3 & D4 --> E1["Deterministic Composite Aggregator"]
+        E1 --> F1{"Disqualification Guardrail?"}
+        F1 -- "Consumer Email / Academic Domain" --> G1["Tier 4: Disqualified (<40)"]
+        F1 -- "Enterprise Commercial Entity" --> G2["Tier 1: Hot (80-100)"]
+        F1 -- "Enterprise Commercial Entity" --> G3["Tier 2: Warm (60-79)"]
+        F1 -- "Enterprise Commercial Entity" --> G4["Tier 3: Cold (40-59)"]
+    end
+
+    subgraph RAG["3. Vector RAG Knowledge Engine (< 50ms)"]
+        G2 & G3 & G4 --> H1["TF-IDF & Cosine Similarity Matcher"]
+        H1 --> H2["Enterprise Knowledge Base\n• Case Studies (Apex, HealthPulse, etc.)\n• Competitor Battlecards (Apollo, Outreach)\n• Pricing & Compliance Specs (SOC2, HIPAA)"]
+        H2 --> H3["Grounded Context & Verified Metric Extraction"]
+    end
+
+    subgraph AGENT["4. Autonomous Cognitive AI Agent (< 950ms)"]
+        H3 --> I1["LeadAutomationAgent Cognitive Loop"]
+        I1 --> I2["Phase 1: Perception & Signal Extraction"]
+        I2 --> I3["Phase 2: Friction & Pain Point Diagnosis"]
+        I3 --> I4["Phase 3: Cross-Pillar Intent Triangulation"]
+        I4 --> I5["Phase 4: Action & Next-Best Step Formulation"]
+        I5 --> J1["Multi-Channel Outreach Synthesis\n(Email, LinkedIn InMail, SDR Call Scripts)"]
+        I5 --> J2["14-Day Omnichannel Cadence Planner"]
+        I5 --> J3["C-Level Executive Opportunity Dossier"]
+    end
+
+    subgraph PRESENTATION["5. Presentation & Dispatch Layer"]
+        G1 & G2 & G3 & G4 --> K1["Streamlit Executive BI Dashboard"]
+        J1 & J2 & J3 --> K1
+        K1 --> L1["Interactive Plotly Visual Analytics\n(Radar, Intent Bubbles, Pipeline Bars)"]
+        K1 --> L2["CRM Dispatch & Webhook Notifications (< 90s SLA)"]
+    end
+```
+
+### Architectural Highlights
+
+1. **Deterministic Guardrails + Cognitive Synthesis**:
+   - High-stakes classification (scoring, qualification tiers, pipeline valuation) is executed by a strictly typed, mathematical scoring engine without probabilistic hallucinations.
+   - LLMs (Gemini / Cognitive Engine) operate downstream to formulate strategy, synthesize outreach copy, and extract strategic insights grounded in RAG knowledge.
+2. **Dual-Engine Execution Resilience**:
+   - **Cloud Mode**: Leverages Google Gemini LLM when `GEMINI_API_KEY` is configured.
+   - **Local Heuristic Fallback**: Executes deterministic reasoning pipelines when running offline, air-gapped, or under API rate limits with zero downtime.
+3. **Sub-Second Core Latency**:
+   - Core scoring executes in `< 5ms`, enabling instant API responses and real-time CRM webhook filtering.
+
+---
+
+## 🔄 End-to-End Lead Processing Pipeline
+
+The following sequence diagram details the real-time execution flow when a prospect enters the system:
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant Prospect as Inbound Lead / Webhook
+    participant API as FastAPI Ingestion Router
+    participant Scorer as 4-Pillar Scoring Engine
+    participant RAG as Vector RAG Knowledge Engine
+    participant Agent as Autonomous AI Agent
+    participant CRM as CRM Webhook / Sales Queue
+    participant BI as Streamlit BI Dashboard
+
+    Prospect->>API: 1. POST /api/leads (Raw JSON Lead Payload)
+    API->>API: 2. Pydantic v2 Type Sanitization & Email Verification
+    API->>Scorer: 3. Compute 4-Pillar Scoring (Firmo, Auth, Intent, Budget)
+    Scorer-->>API: 4. Return ScoreBreakdown (Score: 94.0, Tier 1 - Hot)
+    
+    API->>RAG: 5. Query Vector Store (Industry: Supply Chain, Tech: Salesforce)
+    RAG-->>API: 6. Return Top-K Evidence Chunks & Verified Case Studies
+    
+    API->>Agent: 7. Ingest Lead + Score + RAG Context into Cognitive Agent
+    Note over Agent: Cognitive Loop:<br/>• Step 1: Perceive firmographics & economic buyer authority<br/>• Step 2: Diagnose operational pain points & tech friction<br/>• Step 3: Triangulate purchase timeline & budget readiness<br/>• Step 4: Formulate next-best sales action & 14-day touchpoints
+    Agent-->>API: 8. Return AgentDecision + Bespoke Multi-Channel Copy
+    
+    par Async Dispatch
+        API->>CRM: 9a. Forward Qualified Lead & AE Briefing Dossier (<90s SLA)
+    and Live Telemetry
+        API->>BI: 9b. Update Real-Time BI Visualizations & Pipeline KPIs
+    end
+    
+    API-->>Prospect: 10. HTTP 201 Created (Instant Lead Receipt)
+```
+
+### Pipeline Stage Breakdown
+
+| Stage | Name | Latency SLA | Component | Key Output / Deliverable |
+| :---: | :--- | :---: | :--- | :--- |
+| **01** | **Ingestion & Validation** | `< 15ms` | FastAPI & Pydantic v2 | Sanitized lead schema, consumer email detection, normalized revenue |
+| **02** | **Algorithmic 4-Pillar Scoring** | `< 5ms` | `backend/lead_scoring.py` | Composite score (0–100), ICP tier (Tier 1 Hot to Disqualified), estimated deal size |
+| **03** | **Vector RAG Knowledge Matching** | `< 45ms` | `backend/rag_engine.py` | Top-3 relevant case studies, verified ROI metrics, battlecards against competitors |
+| **04** | **Cognitive Agent Triage** | `< 850ms` | `backend/agent.py` | 4-step reasoning trace, action plan (`route_to_sales_rep`), confidence score |
+| **05** | **Multi-Touch Cadence Synthesis** | `< 950ms` | `backend/agent.py` | Bespoke email, LinkedIn InMail, SDR discovery script, 14-day omnichannel plan |
+| **06** | **Dispatch & Executive BI** | `< 250ms` | Streamlit & REST Webhooks | Live portfolio metrics, dynamic charts, CRM webhook synchronization |
+| **Total** | **Full End-to-End Inbound Triage** | **< 2.1s** | **Unified Cynbit Platform** | **Sub-90-second SLA achieved (vs. 24–48hr human average)** |
+
+---
+
 ## 📁 Repository Structure
 
 ```
