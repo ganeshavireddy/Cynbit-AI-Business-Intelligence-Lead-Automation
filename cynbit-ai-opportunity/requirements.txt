@@ -8,6 +8,10 @@ pydantic-settings>=2.4.0
 streamlit>=1.37.0
 plotly>=5.22.0
 pandas>=2.2.0
+numpy>=1.24.0
+
+# Machine Learning & Vector RAG Engine
+scikit-learn>=1.3.0
 
 # AI & LLM Integrations
 google-genai>=0.1.0

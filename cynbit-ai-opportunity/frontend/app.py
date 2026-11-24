@@ -758,12 +758,30 @@ with st.sidebar:
                 continue
         filtered_leads.append(sl)
 
+    search_matches_elsewhere = []
+    if search_query:
+        sq = search_query.lower().strip()
+        search_matches_elsewhere = [
+            sl for sl in all_scored_leads
+            if sq in sl.lead.company_name.lower() or sq in sl.lead.contact_name.lower()
+        ]
+
     if len(filtered_leads) == 0 and len(all_scored_leads) > 0:
         st.error(f"⚠️ 0 of {len(all_scored_leads)} leads match these filters!")
+        if search_matches_elsewhere:
+            st.warning(f"💡 Found **{len(search_matches_elsewhere)}** matching lead(s) hidden by your other filters:")
+            for sm in search_matches_elsewhere[:2]:
+                st.caption(f"• **{sm.lead.company_name}** ({sm.lead.industry} | {sm.score.tier.split('-')[0].strip()} | Score: {sm.score.total_score:.0f})")
+            if st.button(f"🔍 Show '{search_matches_elsewhere[0].lead.company_name}'", key="quick_view_matched_btn", use_container_width=True):
+                st.session_state["sb_industry"] = "All Industries"
+                st.session_state["sb_tier"] = "All Tiers"
+                st.session_state["sb_min_score"] = 0
+                st.session_state["sb_search"] = search_query
+                st.rerun()
         if selected_tier in ["Tier 3 (Cold)", "Disqualified"] and min_score >= 60:
             st.caption(f"💡 Contradiction: '{selected_tier}' leads score < 60, but Min Score is {min_score}.")
-        if selected_ind != "All Industries" and search_query:
-            st.caption(f"💡 '{search_query}' might belong to a different industry than '{selected_ind}'.")
+        if selected_ind != "All Industries" and search_query and not search_matches_elsewhere:
+            st.caption(f"💡 '{search_query}' not found in active industry '{selected_ind}'.")
         if st.button("⚡ Clear Filters & Show All", use_container_width=True, key="clear_filters_warning_btn"):
             st.session_state["trigger_reset_filters"] = True
             st.rerun()
@@ -927,6 +945,22 @@ with tab2:
     
     if not filtered_leads:
         st.warning("⚠️ No leads match the selected filter criteria. Adjust your search or filters in the sidebar.")
+        if search_matches_elsewhere:
+            st.info(f"💡 Found **{len(search_matches_elsewhere)} lead(s)** matching '{search_query}' outside your active filter criteria:")
+            for sm in search_matches_elsewhere:
+                c_lead_info, c_lead_btn = st.columns([3, 1])
+                with c_lead_info:
+                    st.markdown(f"• **{sm.lead.company_name}** ({sm.lead.contact_name}) — Sector: `{sm.lead.industry}` | Tier: `{sm.score.tier.split('-')[0].strip()}` | Score: `{sm.score.total_score:.0f}/100`")
+                with c_lead_btn:
+                    if st.button(f"🎯 View {sm.lead.company_name}", key=f"t2_view_{sm.lead.lead_id}", use_container_width=True):
+                        st.session_state["sb_industry"] = "All Industries"
+                        st.session_state["sb_tier"] = "All Tiers"
+                        st.session_state["sb_min_score"] = 0
+                        st.session_state["sb_search"] = search_query
+                        st.rerun()
+        if st.button("🔄 Reset All Filters to View Full Portfolio", key="tab2_quick_reset_btn"):
+            st.session_state["trigger_reset_filters"] = True
+            st.rerun()
     
     table_rows = []
     for sl in filtered_leads:
