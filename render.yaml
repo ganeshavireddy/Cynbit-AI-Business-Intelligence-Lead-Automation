@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: cynbit-ai-platform
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: python run_app.py
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: PORT_BACKEND
+        value: "8000"
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: GEMINI_API_KEY
+        sync: false
